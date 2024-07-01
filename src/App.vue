@@ -1,30 +1,28 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div class="wrapper">
+    <NavComp />
+    <main class="container-fluid">
+      <router-view />
+    </main>
+    <FooterComp />
+  </div>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import NavComp from "@/components/Navbar.vue";
+import FooterComp from "@/components/Footer.vue";
 
-nav {
-  padding: 30px;
-}
+export default {
+  components: {
+    NavComp,
+    FooterComp,
+  },
+  computed: {
+    jobTitle() {
+      return this.$store.state.jobTitle;
+    },
+  },
+};
+</script>
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+<style></style>

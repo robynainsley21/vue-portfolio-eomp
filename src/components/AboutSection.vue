@@ -3,13 +3,11 @@
         <div class="col-md-6">
             <img src="" alt="about-img">
         </div>
-        <div class="col-md-6">
-            <p v-if="about && about.length && about[0]?.text">
-                <span>{{ about[0]?.text1 }}</span>
-                <span>{{ about[0]?.text2 }}</span>
-            </p>
-            <SpinnerComp v-else />
+        <div v-if="about?.length" class="col-md-6 about-text">
+            <p>{{ about[0]?.text1 }}</p>
+            <p>{{ about[0]?.text2 }}</p>
         </div>
+        <SpinnerComp v-else />
     </div>
 </template>
 

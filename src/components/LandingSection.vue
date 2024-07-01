@@ -25,7 +25,7 @@
         <h1 class="landing-title text-center">Hi, I'm <span>Robyn</span>.</h1>
 
         <div class="image-box border-animation col-md-6">
-            <img v-if="jobTitle?.img_url" src="{{ jobTitle[0].img_url }}" alt="landing-img" loading="lazy" />
+            <img v-if="jobTitle[0]?.img_url" :src="jobTitle[0].img_url" alt="landing-img" loading="lazy" />
             <SpinnerComp v-else />
         </div>
         <div class="landing-text col-md-6">

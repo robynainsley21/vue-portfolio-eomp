@@ -44,10 +44,17 @@ footer {
   backdrop-filter: blur(5px);
 }
 
+.btn:hover{
+  background-color: var(--darkBg);
+  color: var(--bg);
+  border: 1px solid var(--bg);
+}
+
+/*navigation*/
 #offcanvasNavbar {
   background-color: var(--primary);
 }
-/*navigation*/
+
 img[alt="logo"] {
   width: 5rem;
   border-radius: 100%;
@@ -523,7 +530,107 @@ img[alt="landing-img"] {
 /*landing section*/
 
 /*about section*/
+.wrapper {
+  display: inline-flex;
+  list-style: none;
 
+  & a{
+    color: var(--darkBg);
+  }
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+  background: #333333;
+  color: #ffffff;
+}
+
+.wrapper .linkedin:hover,
+.wrapper .linkedin:hover .tooltip,
+.wrapper .linkedin:hover .tooltip::before {
+  background: #0072b1;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 769px) {
+  .about-text {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  #about {
+    margin-top: 3rem;
+  }
+
+  #about-content {
+    padding: 2rem;
+  }
+
+  .wrapper{
+    display: flex;
+
+  }
+}
 /*about section*/
 
 /*resume section*/
@@ -617,7 +724,7 @@ img[alt="edu-img"] {
     transform: scale(0.85, 0.85) translateY(10px);
   }
 }
-.icon {
+.skillIcon {
   width: 5rem;
   height: 5rem;
   margin: auto;
@@ -634,7 +741,7 @@ img[alt="edu-img"] {
   animation: spin-icon 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite,
     float-icon 1s ease infinite alternate;
 }
-.icon::before {
+.skillIcon::before {
   content: "";
   width: 50px;
   height: 10px;
@@ -678,14 +785,31 @@ img[alt="edu-img"] {
 }
 
 .project-card {
-  height: 25rem;
+  height: 23rem;
+  width: 20rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: column;  
+  position: relative;
+  margin-bottom: 30px;
+  border-radius: 6px;
+  color: rgba(0, 0, 0, 0.87);
+  background: inherit;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 
-  &.project-header {
-    align-items: flex-start;
+  & .card-image {
+    height: 8.5rem;
+    position: relative;
+    overflow: hidden;
+    margin-top: -30px;
+    border-radius: 6px;
+    box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+  } 
+
+  & .project-header{
+    width: 90%;
   }
 }
+
 /*projects section*/
 
 /*contact section*/

@@ -1,7 +1,7 @@
 <template>
     <div v-if="skills?.length" class="row gap-3">
         <div v-for="skill in skills" :key="skill.id" class="card skill-card">
-            <div class="icon mt-4">
+            <div class="skillIcon mt-4">
                 <img class="m-auto" :src="skill.img_url" alt="skill-img" />
             </div>
             <div class="text-center mt-4">

@@ -3,30 +3,30 @@
     <section class="row" id="landing">
       <LandingSection />
     </section>
-    <section class="row" id="about">
-      <h2 class="p-4 text-center">About</h2>
+    <section class="row max-height" id="about">
+      <h2 class="display-2 p-4 text-center">About</h2>
       <div class="row">
         <AboutSection />
       </div>
     </section>
     <section class="row" id="resume">
-      <h2 class="p-4 text-center">Resume</h2>
+      <h2 class="display-2 p-4 text-center">Resume</h2>
       <ResumeSection />
     </section>
     <section class="row" id="skills">
-      <h2 class="p-4 text-center">Skills</h2>
+      <h2 class="display-2 p-4 text-center">Skills</h2>
       <SkillsSection />
     </section>
     <section class="row" id="testimonials">
-      <h2 class="p-4 text-center">Testimonials</h2>
+      <h2 class="display-2 p-4 text-center">Testimonials</h2>
       <TestimonialSection />
     </section>
     <section class="row text-center" id="projects">
-      <h2 class="p-4">Projects</h2>
+      <h2 class="display-2 p-4 mb-5 mt-3">Projects</h2>
       <ProjectsSection />
     </section>
     <section class="row max-height" id="contact">
-      <h2 class="p-4">Contact</h2>
+      <h2 class="display-2 p-4">Contact</h2>
       <ContactSection />
     </section>
   </div>

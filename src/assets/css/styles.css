@@ -51,6 +51,14 @@ footer {
   border: 1px solid var(--bg);
 }
 
+a {
+  text-decoration: none;
+}
+
+.display-2{
+  color: var(--altBg);
+}
+
 /*navigation*/
 #offcanvasNavbar {
   background-color: var(--primary);
@@ -877,6 +885,8 @@ img[alt="card-img"]{
 /*contact section*/
 #contact {
   margin-top: 2rem;
+  margin-bottom: 6rem;
+  height: 100vh;
   /* position: relative;
   background-image: url("https://robynainsley21.github.io/images/ecommerce-skincare/poko-skincare-a6OxyVdFzSA-unsplash.jpg");
   background-attachment: fixed;
@@ -886,6 +896,16 @@ img[alt="card-img"]{
 
 .form-box {
   backdrop-filter: blur(5px);
+  border: 1px solid var(--accent);
+  
 }
 
+@media screen and (max-width: 769px) {
+  .form-box{
+    width: 90%;
+    margin: auto;
+    padding: 2rem;
+    border-radius: 5px;
+  }
+}
 /*contact section*/

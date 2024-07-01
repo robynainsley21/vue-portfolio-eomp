@@ -2,7 +2,10 @@
     <div class="row contact-content">
         <div class="col-md-6">
             <div v-if="contact?.length">
-                <p>{{ contact[0].number }}</p>
+                <p><i class="fa-solid fa-phone"></i>{{ contact[0].number }}</p>
+                <p><i class="fa-brands fa-github"></i><a :href="contact[0].github" target="_blank">GitHub</a></p>
+                <p><i class="fa-brands fa-linkedin-in"></i><a :href="contact[0].linkedin" target="_blank">LinkedIn</a></p>
+                <p><i class="fa-solid fa-location-dot"></i>{{ contact[0].location }}</p>
             </div>
             <SpinnerComp v-else />
         </div>
@@ -20,7 +23,6 @@
                         aria-describedby="emailHelp" required />
                 </div>
             </div>
-
             <div class="mb-3">
                 <label class="form-label">Your message:</label>
                 <input name="message" type="text" class="form-control" id="exampleInputPassword1" />

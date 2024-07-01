@@ -1,0 +1,28 @@
+<template>
+    <div v-if="skills?.length" class="row gap-3">
+        <div v-for="skill in skills" :key="skill.id" class="card skill-card">
+            <div class="icon mt-4">
+                <img class="m-auto" :src="skill.img_url" alt="skill-img" />
+            </div>
+            <div class="text-center mt-4">
+                <p>{{ skill.skill }}</p>
+                <p>{{ skill.description }}</p>
+            </div>
+        </div>
+    </div>
+    <SpinnerComp v-else />
+</template>
+
+<script setup>
+import SpinnerComp from "@/components/Spinner.vue";
+import { computed, onMounted } from "vue";
+import { useStore } from "vuex";
+const store = useStore();
+const skills = computed(() => store.state.skills);
+
+onMounted(() => {
+    store.dispatch("fetchSkills");
+});
+</script>
+
+<style></style>

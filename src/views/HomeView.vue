@@ -7,6 +7,7 @@
       <h2 class="display-2 p-4 text-center">About</h2>
       <div class="row">
         <AboutSection />
+        <div class="line"></div>
       </div>
     </section>
     <section class="row" id="resume">
@@ -14,18 +15,22 @@
       <ResumeSection />
     </section>
     <section class="row" id="skills">
+      <div class="line"></div>
       <h2 class="display-2 p-4 text-center">Skills</h2>
       <SkillsSection />
     </section>
     <section class="row" id="testimonials">
+      <div class="line"></div>
       <h2 class="display-2 p-4 text-center">Testimonials</h2>
       <TestimonialSection />
     </section>
     <section class="row text-center" id="projects">
+      <div class="line"></div>
       <h2 class="display-2 p-4 mb-5 mt-3">Projects</h2>
       <ProjectsSection />
     </section>
     <section class="row max-height" id="contact">
+      <div class="line"></div>
       <h2 class="display-2 p-4">Contact</h2>
       <ContactSection />
     </section>

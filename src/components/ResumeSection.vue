@@ -20,7 +20,8 @@
 
         <h4 class="text-center p-4">Experiences</h4>
         <div class="row gap-3" v-if="experiences?.length">
-            <div class="edu-box" v-for="item in experiences" :key="item.id">
+            <div class="item-container">
+                <div class="edu-box mb-2" v-for="item in experiences" :key="item.id">
                 <div class="col-item">
                     <img :src="item.img_url" alt="edu-img" />
                 </div>
@@ -31,6 +32,8 @@
                     <a href="item.site"><button class="btn">Visit</button></a>
                 </div>
             </div>
+            </div>
+
         </div>
         <SpinnerComp v-else />
     </div>

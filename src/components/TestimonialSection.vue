@@ -1,6 +1,6 @@
 <template>
     <div class="row">
-        <div class="row gap-4" v-if="testimonials?.length">
+        <div class="row gap-5" v-if="testimonials?.length">
             <div class="card testimonial-card" v-for="(testimonial, index) in testimonials" :key="index">
                 <div class="text-center">
                     <img :src="testimonial.img_url" alt="person-img" />
@@ -14,6 +14,7 @@
         </div>
         <SpinnerComp v-else />
     </div>
+    
 </template>
 
 <script setup>

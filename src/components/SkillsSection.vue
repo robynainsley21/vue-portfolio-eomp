@@ -1,11 +1,11 @@
 <template>
-    <div v-if="skills?.length" class="row gap-3">
+    <div v-if="skills?.length" class="row gap-5 mb-4">
         <div v-for="skill in skills" :key="skill.id" class="card skill-card">
             <div class="skillIcon mt-4">
                 <img class="m-auto" :src="skill.img_url" alt="skill-img" />
             </div>
-            <div class="text-center mt-4">
-                <p>{{ skill.skill }}</p>
+            <div class="text-center mt-4 skill-text">
+                <h4>{{ skill.skill }}</h4>
                 <p>{{ skill.description }}</p>
             </div>
         </div>

@@ -27,7 +27,8 @@
   --primary: #5a639c;
   --darkBg: #1d212b;
   --altBg: #151823;
-  --accent: #45474b;
+  --accent: #333;
+  --darkGray: #444;
   --bg: #f5f7f8;
 }
 
@@ -44,7 +45,7 @@ footer {
   backdrop-filter: blur(5px);
 }
 
-.btn:hover{
+.btn:hover {
   background-color: var(--darkBg);
   color: var(--bg);
   border: 1px solid var(--bg);
@@ -534,7 +535,7 @@ img[alt="landing-img"] {
   display: inline-flex;
   list-style: none;
 
-  & a{
+  & a {
     color: var(--darkBg);
   }
 }
@@ -626,17 +627,17 @@ img[alt="landing-img"] {
     padding: 2rem;
   }
 
-  .wrapper{
+  .wrapper {
     display: flex;
-
   }
 }
 /*about section*/
 
 /*resume section*/
-#resume {
-  background-color: var();
-}
+/* #resume {
+  background-color: var(--altBg);
+} */
+
 :is(img[alt="skill-img"]) {
   width: 5rem;
   margin: auto;
@@ -646,16 +647,23 @@ img[alt="edu-img"] {
   width: 9rem;
 }
 
+.line {
+  height: 2px;
+  width: 10%;
+  background-color: var(--accent);
+  margin: 3rem auto;
+}
+
 .edu-box {
   display: flex;
   border-radius: 1rem;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
-    rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
-    rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
   width: 80%;
   margin: auto;
   padding: 2rem;
+
 }
+
+
 
 .col-item {
   width: 50%;
@@ -757,10 +765,23 @@ img[alt="edu-img"] {
 
 .skill-card {
   background-color: inherit;
+  height: 25rem;
+}
+
+.skill-text{
+  height: 15rem;
+  overflow-y: auto;
+  margin-bottom: 1rem;
 }
 /*skills section*/
 
 /*testimonials section*/
+#testimonials{
+  background-color: var(--darkBg);
+  color: #aaa;
+
+}
+
 :is(img[alt="person-img"], img[alt="project-img"]) {
   height: 8rem;
   margin: auto;
@@ -769,12 +790,51 @@ img[alt="edu-img"] {
 .testimonial-card {
   height: 30rem;
   padding: 1rem;
+  background: var(--accent);
+  color: #aaa;
 }
 
 .testimonial-content {
   height: 100%;
   overflow: auto;
   padding: 1rem;
+}
+
+.card {
+  position: relative;
+  width: 20rem;
+  height: 75vh;
+  border-radius: 6px;
+  padding: 2rem;
+  box-shadow: 0 .25rem .25rem rgba(0,0,0,0.2),
+    0 0 1rem rgba(0,0,0,0.2);
+}
+
+@keyframes LineFadeIn {
+  0% { opacity: 0; d: path("M 0 300 Q 0 300 0 300 Q 0 300 0 300 C 0 300 0 300 0 300 Q 0 300 0 300 "); stroke: #fff; }
+  50% { opacity: 1; d: path("M 0 300 Q 50 300 100 300 Q 250 300 350 300 C 350 300 500 300 650 300 Q 750 300 800 300"); stroke: #888BFF; }
+  100% { opacity: 1; d: path("M -2 100 Q 50 200 100 250 Q 250 400 350 300 C 400 250 550 150 650 300 Q 750 450 802 400"); stroke: #545581; }
+}
+
+@keyframes ContentFadeIn {
+  0% { transform: translateY(-1rem); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes ImageFadeIn {
+  0% { transform: translate(-.5rem, -.5rem) scale(1.05); opacity: 0; filter: blur(2px); }
+  50% { opacity: 1; filter: blur(2px); }
+  100% { transform: translateY(0) scale(1.0); opacity: 1; filter: blur(0); }
+}
+
+img[alt="card-img"]{
+  width: 100%;
+}
+
+@media screen and (min-width: 426px) {
+  .card{
+    width: 400px;
+  }
 }
 /*testimonials section*/
 
@@ -788,13 +848,14 @@ img[alt="edu-img"] {
   height: 23rem;
   width: 20rem;
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
   position: relative;
   margin-bottom: 30px;
   border-radius: 6px;
   color: rgba(0, 0, 0, 0.87);
   background: inherit;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
 
   & .card-image {
     height: 8.5rem;
@@ -802,10 +863,11 @@ img[alt="edu-img"] {
     overflow: hidden;
     margin-top: -30px;
     border-radius: 6px;
-    box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
-  } 
+    box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56),
+      0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+  }
 
-  & .project-header{
+  & .project-header {
     width: 90%;
   }
 }

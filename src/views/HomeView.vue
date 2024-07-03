@@ -29,9 +29,9 @@
       <h2 class="display-2 p-4 mb-5 mt-3">Projects</h2>
       <ProjectsSection />
     </section>
-    <section class="row max-height" id="contact">
+    <section class="row" id="contact">
       <div class="line"></div>
-      <h2 class="display-2 p-4">Contact</h2>
+      <h2 class="display-2 text-center m-0 p-0">Contact</h2>
       <ContactSection />
     </section>
   </div>

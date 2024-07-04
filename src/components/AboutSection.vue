@@ -1,12 +1,12 @@
 <template>
-  <div class="row" id="about-content">
-    <div class="col-md-6">
-      <img src="" alt="about-img" />
+  <div class="row justify-content-center align-items-center" v-if="about?.length" id="about-content" data-aos="fade-up">
+    <div class="col-md-6 d-flex justify-content-center">
+      <img :src="about[0]?.img_url" alt="about-img" />
     </div>
-    <div v-if="about?.length" class="col-md-6 about-text">
+    <div class="col-md-6 about-text">
       <p>{{ about[0]?.text1 }}</p>
       <p>{{ about[0]?.text2 }}</p>
-      <ul v-if="about?.length" class="wrapper d-flex justify-content-center">
+      <ul class="wrapper d-flex justify-content-center">
         <a :href="about.github" target="_blank" class="icon github">
           <span class="tooltip">Github</span>
           <span><i class="fab fa-github"></i></span>
@@ -17,8 +17,8 @@
         </a>
       </ul>
     </div>
-    <SpinnerComp v-else />
   </div>
+  <SpinnerComp v-else />
 </template>
 
 <script setup>

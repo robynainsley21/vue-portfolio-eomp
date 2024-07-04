@@ -1,5 +1,5 @@
 <template>
-  <div class="row contact-content">
+  <div class="row contact-content" data-aos="fade-up">
     <div class="row contact-background">
       <div class="col-md-6 contact-details" v-if="contact?.length">
         <h6 class="display-6 p-3 m-0">Let's get in touch.</h6>
@@ -21,7 +21,7 @@
       <SpinnerComp v-else />
       <form
         class="col-md-6 form-box"
-        action="https://formspree.io/f/xwkgyjal"
+        action="https://formspree.io/f/xzzpbazg"
         method="POST"
         id="contact-form"
         target="_blank"
@@ -78,11 +78,15 @@
 import SpinnerComp from "@/components/Spinner.vue";
 import { computed, onMounted } from "vue";
 import { useStore } from "vuex";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 const store = useStore();
 const contact = computed(() => store.state.contact);
 
 onMounted(() => {
   store.dispatch("fetchContact");
+  AOS.init();
 });
 </script>
 

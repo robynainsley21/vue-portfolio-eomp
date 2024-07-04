@@ -3,16 +3,21 @@
     <section class="row" id="landing">
       <LandingSection />
     </section>
-    <section class="row max-height" id="about">
+    <section
+      class="row max-height animate__fadeInUp animate__infinite"
+      id="about"
+    >
       <h2 class="display-2 p-4 text-center">About</h2>
       <div class="row">
         <AboutSection />
         <div class="line"></div>
       </div>
     </section>
-    <section class="row" id="resume">
-      <h2 class="display-2 p-4 text-center">Resume</h2>
-      <ResumeSection />
+    <section class="row resume-background" id="resume">
+      <div class="blur-background">
+        <h2 class="display-2 p-4 text-center">Resume</h2>
+        <ResumeSection />
+      </div>
     </section>
     <section class="row" id="skills">
       <div class="line"></div>
@@ -38,16 +43,16 @@
 </template>
 
 <script>
-import LandingSection from '@/components/LandingSection.vue'
-import AboutSection from '@/components/AboutSection.vue'
-import ResumeSection from '@/components/ResumeSection.vue';
-import SkillsSection from '@/components/SkillsSection.vue'
-import TestimonialSection from '@/components/TestimonialSection.vue'
-import ProjectsSection from '@/components/ProjectsSection.vue'
-import ContactSection from '@/components/ContactSection.vue'
+import LandingSection from "@/components/LandingSection.vue";
+import AboutSection from "@/components/AboutSection.vue";
+import ResumeSection from "@/components/ResumeSection.vue";
+import SkillsSection from "@/components/SkillsSection.vue";
+import TestimonialSection from "@/components/TestimonialSection.vue";
+import ProjectsSection from "@/components/ProjectsSection.vue";
+import ContactSection from "@/components/ContactSection.vue";
 
 export default {
-  name: 'HomeView',
+  name: "HomeView",
   components: {
     LandingSection,
     AboutSection,
@@ -55,7 +60,7 @@ export default {
     SkillsSection,
     TestimonialSection,
     ProjectsSection,
-    ContactSection
-  }
-}
+    ContactSection,
+  },
+};
 </script>

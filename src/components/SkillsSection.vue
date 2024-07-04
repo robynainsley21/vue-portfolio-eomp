@@ -1,6 +1,6 @@
 <template>
-    <div v-if="skills?.length" class="row gap-5 mb-4">
-        <div v-for="skill in skills" :key="skill.id" class="card skill-card">
+    <div v-if="skills?.length" class="row gap-5 mb-5">
+        <div v-for="skill in skills" :key="skill.id" class="card skill-card" data-aos="fade-up">
             <div class="skillIcon mt-4">
                 <img class="m-auto" :src="skill.img_url" alt="skill-img" />
             </div>

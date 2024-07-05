@@ -6,7 +6,7 @@
     <div class="col-md-6 about-text">
       <p>{{ about[0]?.text1 }}</p>
       <p>{{ about[0]?.text2 }}</p>
-      <ul class="wrapper d-flex justify-content-center">
+      <ul class="wrapper d-flex justify-content-center align-items-center">
         <a :href="about.github" target="_blank" class="icon github">
           <span class="tooltip">Github</span>
           <span><i class="fab fa-github"></i></span>
@@ -15,6 +15,7 @@
           <span class="tooltip">LinkedIn</span>
           <span><i class="fab fa-linkedin"></i></span>
         </a>
+        <span class="location"><i class="fa-solid fa-location-dot mx-2"></i>{{ about[0]?.location }}</span>
       </ul>
     </div>
   </div>

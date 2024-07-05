@@ -73,7 +73,6 @@ nav {
   /* background-color: var(--darkBg); */
 
   & ul {
-
     & a.nav-link {
       color: var(--bg);
       background-color: var(--darkBg);
@@ -88,13 +87,13 @@ nav {
   }
 }
 
-.nav-link:target, 
-.nav-link[href="landing"]:target, 
-.nav-link[href="about"]:target, 
-.nav-link[href="resume"]:target, 
-.nav-link[href="skills"]:target, 
-.nav-link[href="testimonials"]:target, 
-.nav-link[href="projects"]:target, 
+.nav-link:target,
+.nav-link[href="landing"]:target,
+.nav-link[href="about"]:target,
+.nav-link[href="resume"]:target,
+.nav-link[href="skills"]:target,
+.nav-link[href="testimonials"]:target,
+.nav-link[href="projects"]:target,
 .nav-link[href="contact"]:target {
   color: var(--primary);
 }
@@ -592,6 +591,13 @@ img[alt="landing-img"] {
   & a {
     color: var(--darkBg);
   }
+}
+
+.location{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 8px;
+  padding: .5rem;
+  margin-left: .7rem;
 }
 
 /* .about-content{
